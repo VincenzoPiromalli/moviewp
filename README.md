@@ -123,7 +123,7 @@ original demo (movies & tv series)
 
 ##  Support
 
-There is no support and no updates for free version, to get free installation, lifetime technical support, and free monthly updates you can buy the product [here](https://fr0zen.mysellix.io/product/617ad1a1357ba)
+There is no support and no updates for free version, to get free installation, lifetime technical support, and free monthly updates you can buy the product [here](https://fr0zen.store/moviewp/)
 
 For any support requests or custom work requests you can contact me at this address
 
