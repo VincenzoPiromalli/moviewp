@@ -1,4 +1,4 @@
-![MovieWP](https://i.imgur.com/KCUcJOz.png)
+![MovieWP](https://i.imgur.com/grPTQHs.png)
 
 ##  MovieWP 3.8.7
 
