@@ -2,7 +2,7 @@
 /*
 * ----------------------------------------------------
 * @author: fr0zen
-* @author URI: https://fr0zen.sellix.io
+* @author URI: https://fr0zen.store
 * @copyright: (c) 2022 Vincenzo Piromalli. All rights reserved
 * ----------------------------------------------------
 * @since 3.8.7
@@ -53,7 +53,7 @@ function postview_cache_count_enqueue() {
 	global $post;
 	if ( is_single() ) {
 		// Enqueue and localize script here
-		wp_register_script( 'postviews-cache', get_template_directory_uri() . '/assets/js/postviews-cache.js', array( 'jquery' ), '3.8.7', true );
+		wp_register_script( 'postviews-cache', get_template_directory_uri() . '/assets/js/postviews-cache.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
 		wp_localize_script( 'postviews-cache', 'viewsCacheL10n', array(
 		'ajaxurl' => admin_url('admin-ajax.php', (is_ssl() ? 'https' : 'http')), 
 		'post_id' => intval($post->ID),

@@ -5,7 +5,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @author: fr0zen
- * @author URI: https://fr0zen.sellix.io
+ * @author URI: https://fr0zen.store
  * @copyright: (c) 2022 Vincenzo Piromalli. All rights reserved
  * ----------------------------------------------------
  * @since 3.8.7

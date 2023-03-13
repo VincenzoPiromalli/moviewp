@@ -89,7 +89,6 @@ $google_fonts_name = esc_html__( 'Tajawal', 'moviewp' );
 			<div id="autoembed">
 			</div>
 	        <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-	        <!--<script src="//cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js" disable-devtool-auto ></script>-->
 			<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/autoembed-tv.js?ver=3.8.7"></script>
 			<script>var api_key = "49101d62654e71a2931722642ac07e5e";var tmdb = "<?php echo $tmdb; ?>";var season = "<?php echo $season; ?>";var episode = "<?php echo $episode; ?>";</script>
 		</body>

@@ -2,7 +2,7 @@
 /**
  *
  * @author: fr0zen
- * @author URI: https://fr0zen.sellix.io
+ * @author URI: https://fr0zen.store
  * @copyright: (c) 2022 Vincenzo Piromalli. All rights reserved
  * ----------------------------------------------------
  * @since 3.8.7
@@ -490,7 +490,7 @@ function moviewp_clear($text) {
 
 function live_search() {
 if( !is_single() ){
-	wp_enqueue_script('live_search', get_template_directory_uri() .'/assets/js/live.search.js', array('jquery'), '3.8.7', true);
+	wp_enqueue_script('live_search', get_template_directory_uri() .'/assets/js/live.search.js', array('jquery'), wp_get_theme()->get( 'Version' ), true);
 	wp_localize_script( 
 		'live_search', 
 		'moviewpSearch', 
@@ -1137,7 +1137,7 @@ add_filter( 'cpt_post_types', 'my_cpt_post_types' );
 //Modify admin footer text
 
 function modify_footer() { ?>
-<?php echo __('Created by ', 'moviewp'); ?><a href="<?php echo esc_url( __( 'https://fr0zen.sellix.io/', 'moviewp' ) ); ?>" target="_blank"><?php printf( __( 'fr0zen %s', 'moviewp' ),''); ?></a>
+<?php echo __('Created by ', 'moviewp'); ?><a href="<?php echo esc_url( __( 'https://fr0zen.store/', 'moviewp' ) ); ?>" target="_blank"><?php printf( __( 'fr0zen %s', 'moviewp' ),''); ?></a>
 <?php }
 add_filter( 'admin_footer_text', 'modify_footer' );
 
@@ -1560,73 +1560,7 @@ function moviewp_embed_tv_parse_request( &$wp )
     }
 }
 
-if ( ! function_exists('custom_post_type') ) {
 
-// Register Custom Post Type
-function custom_post_type() {
-
-	$labels = array(
-		'name'                  => _x( 'Articles', 'Post Type General Name', 'moviewp' ),
-		'singular_name'         => _x( 'Article', 'Post Type Singular Name', 'moviewp' ),
-		'menu_name'             => __( 'Articles', 'moviewp' ),
-		'name_admin_bar'        => __( 'Articles', 'moviewp' ),
-		'archives'              => __( 'Articles archives', 'moviewp' ),
-		'attributes'            => __( 'Article Attributes', 'moviewp' ),
-		'parent_item_colon'     => __( 'Parent Article:', 'moviewp' ),
-		'all_items'             => __( 'All Articles', 'moviewp' ),
-		'add_new_item'          => __( 'Add New Article', 'moviewp' ),
-		'add_new'               => __( 'Add New', 'moviewp' ),
-		'new_item'              => __( 'New Article', 'moviewp' ),
-		'edit_item'             => __( 'Edit Article', 'moviewp' ),
-		'update_item'           => __( 'Update Article', 'moviewp' ),
-		'view_item'             => __( 'View Article', 'moviewp' ),
-		'view_items'            => __( 'View Articles', 'moviewp' ),
-		'search_items'          => __( 'Search Article', 'moviewp' ),
-		'not_found'             => __( 'Not found', 'moviewp' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'moviewp' ),
-		'featured_image'        => __( 'Featured Image', 'moviewp' ),
-		'set_featured_image'    => __( 'Set featured image', 'moviewp' ),
-		'remove_featured_image' => __( 'Remove featured image', 'moviewp' ),
-		'use_featured_image'    => __( 'Use as featured image', 'moviewp' ),
-		'insert_into_item'      => __( 'Insert into Article', 'moviewp' ),
-		'uploaded_to_this_item' => __( 'Uploaded to this Article', 'moviewp' ),
-		'items_list'            => __( 'Articles list', 'moviewp' ),
-		'items_list_navigation' => __( 'Articles list navigation', 'moviewp' ),
-		'filter_items_list'     => __( 'Filter Articles list', 'moviewp' ),
-	);
-	$rewrite = array(
-		'slug'                  => 'blog',
-		'with_front'            => true,
-		'pages'                 => true,
-		'feeds'                 => true,
-	);
-	$args = array(
-		'label'                 => __( 'Article', 'moviewp' ),
-		'description'           => __( 'Articles', 'moviewp' ),
-		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'comments', 'trackbacks', 'revisions' ),
-		//'taxonomies'            => array( 'post_tag' ),
-		'hierarchical'          => false,
-		'public'                => true,
-		'show_ui'               => true,
-		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-clipboard',
-		'show_in_admin_bar'     => true,
-		'show_in_nav_menus'     => true,
-		'can_export'            => true,
-		'has_archive'           => 'blog',
-		'exclude_from_search'   => true,
-		'publicly_queryable'    => true,
-		'rewrite'               => $rewrite,
-		'capability_type'       => 'post',
-	);
-	register_post_type( 'article', $args );
-
-}
-add_action( 'init', 'custom_post_type', 0 );
-
-}
 
 function article() {
     global $post;

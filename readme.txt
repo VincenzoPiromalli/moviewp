@@ -5,8 +5,8 @@ Requires at least: 5.3
 Tested up to: 5.8
 Requires PHP: 7.0
 Stable tag: 3.8.7
-License: Limited
-License URI: https://fr0zen.sellix.io
+License: Free
+License URI: https://fr0zen.store/
 
 == Description ==
 
@@ -14,11 +14,14 @@ Write reviews, add video streaming, or create a Movie and TV Show database with 
 
 == Installation ==
 
-1. You must do a clean installation ow WordPress before install theeme.
-2. Upload theme and activate it.
-3. Install and activate ALL plugins required when activating the theme.
-4. Configure your setting in MovieWP admin panel.
-5. Do not delete or rename category Movies and TV Series from wordpress category editor or the theme will no longer work properly!!
+1. You must do a clean installation ow WordPress before install theme.
+2. If your server is PHP 8 you must downgrade to version 7.4 as the new version (PHP 8) is not supported by the theme.
+3. The wordpress installation must absolutely be on SSL (https) otherwise the theme will not work.
+4. Upload theme and activate it.
+5. Install and activate ALL plugins required when activating the theme.
+6. Go to Settings> Taxonomy Image> Select the "networks" and "collection" fields.
+7. Configure your setting in MovieWP admin panel.
+8. Do not delete or rename category Movies and TV Series from wordpress category editor or the theme will no longer work properly!!
 
 
 == Copyright ==
@@ -205,7 +208,6 @@ fr0zen all right reserved.
 - Added: Collection tag below the description of the movies (if the collection exists).
 - Added: TV Networks page.
 - Fixed: Sidebar scroll
-- Updated: Autoembed
 - Updated: JS
 - Updated: CSS
 

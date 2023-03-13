@@ -2,7 +2,7 @@
 /*
 * ----------------------------------------------------
 * @author: fr0zen
-* @author URI: https://fr0zen.sellix.io
+* @author URI: https://fr0zen.store
 * @copyright: (c) 2022 Vincenzo Piromalli. All rights reserved
 * ----------------------------------------------------
 * @since 3.8.7
@@ -17,10 +17,10 @@ if ($sv == "2embed") {
 $site = "https://www.2embed.to/embed/imdb/movie?id=".$id;
 } 
 else if ($sv == "vidsrc") {
-$site = esc_url( get_template_directory_uri() ).'/player/se_player.php?video_id='.$id;
+$site = 'https://membed.altervista.org/player.php?video_id='.$id;
 } 
 else if ($sv == "gdriveplayer") {
-$site = 'https://databasegdriveplayer.co/player.php?imdb='.$id;
+$site = 'https://vidsrc.me/embed/'.$id;
 }
 else if ($sv == "") {
 $site = "https://www.2embed.to/embed/imdb/movie?id=".$id;

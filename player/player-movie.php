@@ -2,7 +2,7 @@
 /*
 * ----------------------------------------------------
 * @author: fr0zen
-* @author URI: https://fr0zen.sellix.io
+* @author URI: https://fr0zen.store
 * @copyright: (c) 2022 Vincenzo Piromalli. All rights reserved
 * ----------------------------------------------------
 * @since 3.8.7
@@ -86,7 +86,6 @@ $google_fonts_name = esc_html__( 'Tajawal', 'moviewp' );
 			<div id="autoembed">
 			</div>
 	<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/disable-devtool/disable-devtool.min.js" disable-devtool-auto ></script>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/js/autoembed.js?ver=3.8.7"></script>
 	</body>
 </html>

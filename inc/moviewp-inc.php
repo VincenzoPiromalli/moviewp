@@ -2,7 +2,7 @@
 /*
 * ----------------------------------------------------
 * @author: fr0zen
-* @author URI: https://fr0zen.sellix.io
+* @author URI: https://fr0zen.store
 * @copyright: (c) 2022 Vincenzo Piromalli. All rights reserved
 * ----------------------------------------------------
 * @since 3.8.7
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	function moviewp admin panel
 \*====================================*/
 
-get_template_part('moviewppanel/license-protection');
+get_template_part('moviewppanel/options');
 
 function moviewppanel_add_styles() {
 	// Register moviewordpress panel main stylesheet

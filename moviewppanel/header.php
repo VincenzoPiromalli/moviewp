@@ -2,7 +2,7 @@
 /*
 * ----------------------------------------------------
 * @author: fr0zen
-* @author URI: https://fr0zen.sellix.io
+* @author URI: https://fr0zen.store
 * @copyright: (c) 2022 Vincenzo Piromalli. All rights reserved
 * ----------------------------------------------------
 * @since 3.8.7
@@ -18,7 +18,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="moviewppanel-container">
 	<div class="moviewppanel-column moviewppanel-column-sticky">
 		<div class="moviewppanel-box">
-			<div class="moviewppanel-logo"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/moviewppanel/images/logo.png" alt="<?php echo esc_attr__('MovieWP', 'moviewp'); ?>" /></div>
+			<div class="moviewppanel-logo">
+			<a href="<?php echo esc_url( __( wp_get_theme()->get( 'AuthorURI' )) ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/moviewppanel/images/logo.png" alt="<?php echo esc_attr__('fr0zen', 'moviewp'); ?>" /></a>
+			<br>
+			<span><?php echo __('MovieWP', 'moviewp'); ?> <p><?php echo wp_get_theme()->get( 'Version' ) ?></p></span>
+			</div>
 			<nav class="moviewppanel-navigation">
 				<ul>
 					<li><a href="<?php echo admin_url('admin.php?page=moviewppanel-main'); ?>" class="moviewppanel-icon-nav-1 <?php if ($_REQUEST['page'] == 'moviewppanel-main'): echo 'active'; endif; ?>"><?php echo __('General', 'moviewp'); ?></a></li>

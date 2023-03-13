@@ -2,7 +2,7 @@
 /*
 * ----------------------------------------------------
 * @author: fr0zen
-* @author URI: https://fr0zen.sellix.io
+* @author URI: https://fr0zen.store
 * @copyright: (c) 2022 Vincenzo Piromalli. All rights reserved
 * ----------------------------------------------------
 * @since 3.8.7
@@ -31,6 +31,7 @@ function getRating($value) {
 function ProgressBar() {
 	global $post;
 	$imdbRating = esc_html(get_post_meta($post -> ID, 'imdbRating', true));
+	$imdbRating = substr($imdbRating, 0, 3);
 	$imdbRating = str_replace("10", "100", $imdbRating);
 	$progress = str_replace(".", "", $imdbRating);
 	$value = getRating($progress);
@@ -50,6 +51,7 @@ function ProgressBar() {
 function movieRating() {
 	global $post;
 	$imdbRating = esc_html(get_post_meta($post -> ID, 'imdbRating', true));
+	$imdbRating = substr($imdbRating, 0, 3);
 	$imdbRating = str_replace("10", "100", $imdbRating);
 	$progress = str_replace(".", "", $imdbRating);
 	$value = getRating($progress);
@@ -72,6 +74,7 @@ function movieRating() {
 function DataPercentage() {
 	global $post;
 	$imdbRating = esc_html(get_post_meta($post -> ID, 'imdbRating', true));
+	$imdbRating = substr($imdbRating, 0, 3);
 	if ($imdbRating != '') {
 		$imdbRating = str_replace("10", "100", $imdbRating);
 		$imdbRating = str_replace(".", "", $imdbRating);
@@ -83,6 +86,7 @@ function DataPercentage() {
 function ProgressValue() {
 	global $post;
 	$imdbRating = esc_html(get_post_meta($post -> ID, 'imdbRating', true));
+	$imdbRating = substr($imdbRating, 0, 3);
 	if ($imdbRating != '') {
 		//$imdbRating = str_replace(".", "", $imdbRating);
 		//echo getRating($imdbRating);
@@ -227,6 +231,7 @@ function itemYear() {
 function itemRating() {
 	global $post;
 	$imdbRating = esc_html(get_post_meta($post -> ID, 'imdbRating', true));
+	$imdbRating = substr($imdbRating, 0, 3);
 	$imdbRating = str_replace('false', '0.0', $imdbRating); 
 	$imdbRating = str_replace('', '0.0', $imdbRating); 
 	if ($imdbRating == '') {
@@ -242,6 +247,7 @@ function itemRating() {
 function displayRating() {
 	global $post;
 	$imdbRating = esc_html(get_post_meta($post -> ID, 'imdbRating', true));
+	$imdbRating = substr($imdbRating, 0, 3);
 	$imdbRating = str_replace('false', '0.0', $imdbRating); 
 	$imdbRating = str_replace('', '0.0', $imdbRating); 
 	if (!isset($_GET['order'])) {
@@ -426,6 +432,7 @@ function ButtonPoster() {
 function SingleRating() {
 	global $post;
 	$imdbRating = esc_html(get_post_meta($post -> ID, 'imdbRating', true));
+	$imdbRating = substr($imdbRating, 0, 3);
 	$imdbRating = str_replace('false', '0.0', $imdbRating); 
 	$imdbRating = str_replace('', '0.0', $imdbRating); 
 	if ($imdbRating == '') {
@@ -710,6 +717,7 @@ function MovieSchema() {
 function SchemaRating() {
 	global $post;
 	$imdbRating = esc_html(get_post_meta($post -> ID, 'imdbRating', true));
+	$imdbRating = substr($imdbRating, 0, 3);
 	$imdbRating = str_replace('false', '0.0', $imdbRating); 
 	$imdbRating = str_replace('', '0.0', $imdbRating); 
 	if ($imdbRating == '') {
@@ -882,7 +890,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	$script = 'embed';
 	}
 	
-	wp_enqueue_script( $script, get_template_directory_uri() . '/assets/js/'.$script.'.js', array( 'jquery' ), '3.8.7', true );
+	wp_enqueue_script( $script, get_template_directory_uri() . '/assets/js/'.$script.'.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
 	wp_localize_script( $script, 'MoviewpAPI', array( 
 	'tvapikey' => apikey,
 	'tvid' => $tmdbid, 
@@ -920,7 +928,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	$imdbid = esc_html(get_post_meta($post -> ID, 'imdb_id', true));
 	$sd = esc_html(get_post_meta($post -> ID, '720p', true));
 	$hd = esc_html(get_post_meta($post -> ID, '1080p', true));
-	wp_enqueue_script( 'movie', get_template_directory_uri() . '/assets/js/movie.js', array( 'jquery' ), '3.8.7', true );
+	wp_enqueue_script( 'movie', get_template_directory_uri() . '/assets/js/movie.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
 	wp_localize_script( 'movie', 'MoviewpAPI', array( 
 	'tmdbapi' => apikey,
 	'movie' => $tmdbid, 
@@ -946,7 +954,7 @@ add_action( 'wp_enqueue_scripts', function() {
 function modal_enqueue_script() {
 
 	if(!is_single()) return;
-	wp_enqueue_script( 'modal', get_template_directory_uri() . '/assets/js/modal.js', array( 'jquery' ), '3.8.7', true );
+	wp_enqueue_script( 'modal', get_template_directory_uri() . '/assets/js/modal.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
 
 }
 add_action( 'wp_enqueue_scripts', 'modal_enqueue_script' );

@@ -2,7 +2,7 @@
 /*
 * ----------------------------------------------------
 * @author: fr0zen
-* @author URI: https://fr0zen.sellix.io
+* @author URI: https://fr0zen.store
 * @copyright: (c) 2022 Vincenzo Piromalli. All rights reserved
 * ----------------------------------------------------
 * @since 3.8.7
@@ -198,7 +198,7 @@ define	('apilanguage', 'en-US');
 if (strlen($moviewp_disqus) > 0) { 
 define	('disqus', html_entity_decode(stripslashes_deep($moviewp_disqus), ENT_QUOTES)); 
  } else { 
-define	('disqus', 'moviewordpress'); 
+define	('disqus', 'movieapp-1'); 
 } 
 if (strlen($moviewp_omdb) > 0) { 
 define	('omdb', html_entity_decode(stripslashes_deep($moviewp_omdb), ENT_QUOTES)); 

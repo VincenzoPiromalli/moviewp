@@ -44,7 +44,7 @@ $moviewp_letter = get_option('moviewppanel_letter');
 					</ul>
 				</li>
 				<?php if ($moviewp_quality == 1) { ?>
-				<li class="dropdown quality-filter quality">
+					<li class="dropdown quality-filter quality">
 					<div class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><?php echo txtquality; ?><i class="fa fa-angle-down"></i></div>
 					<ul class="dropdown-menu quality ps-display">
 						<?php DropdownQuality(); ?>
