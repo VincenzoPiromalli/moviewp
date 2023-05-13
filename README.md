@@ -117,7 +117,7 @@ Auto embed thousands of movies & tv shows available on multiple servers, lets yo
 
 original demo (movies & tv series)
 
-[moviewp custom work ]([https://moviewp.com/](https://moviewp.altervista.org/))
+[moviewp custom work ](https://moviewp.altervista.org/))
 
 customer demo
 
