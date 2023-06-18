@@ -16,7 +16,7 @@ $episode = $_GET['e'];
 $site = "";
 
 if ($sv == "2embed") {
-$site = 'https://www.2embed.to/embed/tmdb/tv?id='.$id.'&s='.$season.'&e='.$episode;
+$site = 'https://remotestre.am/e/?tmdb='.$id.'&s='.$season.'&e='.$episode;
 } 
 else if ($sv == "apimdb") {
 $site = 'https://membed.altervista.org/player.php?video_id='.$id.'&tmdb=1&s='.$season.'&e='.$episode;
@@ -25,7 +25,7 @@ else if ($sv == "gdriveplayer") {
 $site = 'https://vidsrc.me/embed/'.$id.'/'.$season.'-'.$episode.'/';
 }
 else if ($sv == "") {
-$site = 'https://www.2embed.to/embed/tmdb/tv?id='.$id.'&s='.$season.'&e='.$episode;
+$site = 'https://remotestre.am/e/?tmdb='.$id.'&s='.$season.'&e='.$episode;
 } 
 ?>
 <!DOCTYPE HTML>
