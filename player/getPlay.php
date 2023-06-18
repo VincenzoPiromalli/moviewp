@@ -14,7 +14,7 @@ $sv = $_GET['sv'];
 $site = "";
 
 if ($sv == "2embed") {
-$site = "https://www.2embed.to/embed/imdb/movie?id=".$id;
+$site = "https://remotestre.am/e/?imdb=".$id;
 } 
 else if ($sv == "vidsrc") {
 $site = 'https://membed.altervista.org/player.php?video_id='.$id;
@@ -23,7 +23,7 @@ else if ($sv == "gdriveplayer") {
 $site = 'https://vidsrc.me/embed/'.$id;
 }
 else if ($sv == "") {
-$site = "https://www.2embed.to/embed/imdb/movie?id=".$id;
+$site = "https://remotestre.am/e/?imdb=".$id;
 } 
 ?>
 <!DOCTYPE HTML>
