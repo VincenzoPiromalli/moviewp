@@ -16,7 +16,7 @@ $episode = $_GET['e'];
 $site = "";
 
 if ($sv == "2embed") {
-$site = 'https://remotestre.am/e/?tmdb='.$id.'&s='.$season.'&e='.$episode;
+$site = '//vidsrc.to/embed/tv/'.$id.'/'.$season.'/'.$episode;
 } 
 else if ($sv == "apimdb") {
 $site = 'https://membed.altervista.org/player.php?video_id='.$id.'&tmdb=1&s='.$season.'&e='.$episode;
