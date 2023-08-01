@@ -14,7 +14,7 @@ $sv = $_GET['sv'];
 $site = "";
 
 if ($sv == "2embed") {
-$site = "https://remotestre.am/e/?imdb=".$id;
+$site = "https://vidsrc.to/embed/movie/".$id;
 } 
 else if ($sv == "vidsrc") {
 $site = 'https://membed.altervista.org/player.php?video_id='.$id;
